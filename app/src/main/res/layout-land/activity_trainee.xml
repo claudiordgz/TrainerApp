@@ -1,0 +1,67 @@
+<LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/sample_main_layout">
+
+    <include layout="@layout/toolbar"/>
+
+    <com.mobileappscompany.android.trainerapplibrary.views.custom_views.TraineeHeader
+        android:id="@+id/trainee_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:trainee_avatar="@drawable/hugh"
+        app:trainee_avatar_width="64dp"
+        app:background_header="@color/white"
+        app:first_name="First Name"
+        app:last_name="Last Name"
+        app:technology="Technology"
+        />
+
+    <FrameLayout
+        android:id="@+id/sample_content_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:id="@+id/sample_output"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ScrollView
+                  style="@style/Widget.SampleMessageTile"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                <TextView
+                      style="@style/Widget.SampleMessage"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:paddingLeft="@dimen/margin_medium"
+                      android:paddingRight="@dimen/margin_medium"
+                      android:paddingTop="@dimen/margin_large"
+                      android:paddingBottom="@dimen/margin_large"
+                      android:text="@string/intro_message" />
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+

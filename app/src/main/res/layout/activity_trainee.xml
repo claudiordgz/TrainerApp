@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/sample_main_layout"
+    >
+    <include
+        layout="@layout/toolbar"
+        />
+    <com.mobileappscompany.android.trainerapplibrary.views.custom_views.TraineeHeader
+        android:id="@+id/trainee_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:trainee_avatar_width="64dp"
+        app:background_header="@color/white"
+        app:first_name="First Name"
+        app:last_name="Last Name"
+        app:technology="Technology"
+        />
+
+    <FrameLayout
+        android:id="@+id/sample_content_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        />
+
+    <ViewAnimator
+          android:id="@+id/sample_output"
+          android:layout_width="match_parent"
+          android:layout_height="0px"
+          android:layout_weight="1">
+
+        <ScrollView
+            style="@style/Widget.SampleMessageTile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                style="@style/Widget.SampleMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/horizontal_page_margin"
+                android:paddingRight="@dimen/horizontal_page_margin"
+                android:paddingTop="@dimen/vertical_page_margin"
+                android:paddingBottom="@dimen/vertical_page_margin"
+                android:text="@string/intro_message"
+                />
+        </ScrollView>
+    </ViewAnimator>
+</LinearLayout>
+
